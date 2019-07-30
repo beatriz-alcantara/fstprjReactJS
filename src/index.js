@@ -4,18 +4,18 @@ import ReactDOM from "react-dom";
 import "./styles.css";
 
 function App() {
-  const [estado, setEstado] = useState("ENTRADA");
+  const [estado, setEstado] = useState("ENTRADA"); // declara uma variavel com nome estado e uma fução pra alterar o seu valor com o nome setEstado. o useState define o valor inicial da variável
   const [min, setMin] = useState(0);
   const [max, setMax] = useState(300);
 
   const [palpite, setPalpite] = useState(150);
 
   const iniciarJogo = () => {
-    setEstado("RODANDO");
+    setEstado("RODANDO"); // Altera o valor da variável estado para "RODANDO"
   };
 
   const finalizarJogo = () => {
-    setEstado("FIM");
+    setEstado("FIM"); // Altera o valor da variável estado para "FIM"
   };
 
   const menor = () => {
@@ -45,9 +45,11 @@ function App() {
 
   return (
     <div className="App">
+      {" "}
+      {/* A propriedade className define o nome da tag que irá representar esse componente */}
       <h2>{palpite}</h2>
       <h5>
-        Min: {min} / Max: {max}
+        Min: {min} / Max: {max} {/* As chaves incorporam o ambiente JS */}
       </h5>
       <button onClick={maior}>Maior</button>
       <button onClick={finalizarJogo}>Acertou</button>
@@ -56,5 +58,19 @@ function App() {
   );
 }
 
-const rootElement = document.getElementById("root");
+const rootElement = document.getElementById("root"); // Esse id root ta no index.html na pasta public
 ReactDOM.render(<App />, rootElement);
+
+/* um elemento é uma tag html
+   um componente é a junção de dois ou mais elementos
+   não podemos retornar dois elementos sem estarem agrupados
+   ex.: Não pode
+   <h1> Olá </h1>
+   <h2> Seja Bem-vindo </h2>
+
+   ex.: Pode
+   <div>
+    <h1> Olá </h1>
+    <h2> Seja Bem-vindo </h2>
+   </div>
+  */
