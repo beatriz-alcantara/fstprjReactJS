@@ -1,2 +1,0 @@
-# fstprjReactJS
-Created with CodeSandbox
