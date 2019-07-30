@@ -45,7 +45,6 @@ function App() {
 
   return (
     <div className="App">
-      {" "}
       {/* A propriedade className define o nome da tag que irá representar esse componente */}
       <h2>{palpite}</h2>
       <h5>
